@@ -12,6 +12,8 @@
 		1131E84C2BE26C3200D40120 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E84B2BE26C3200D40120 /* Item.swift */; };
 		1131E84E2BE26C3300D40120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131E84D2BE26C3300D40120 /* Assets.xcassets */; };
 		1131E8512BE26C3300D40120 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131E8502BE26C3300D40120 /* Preview Assets.xcassets */; };
+		1131E85A2BE26FF100D40120 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8592BE26FF100D40120 /* LoginPage.swift */; };
+		1131E85D2BE271EF00D40120 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E85C2BE271EF00D40120 /* MainPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		1131E84B2BE26C3200D40120 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1131E84D2BE26C3300D40120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1131E8502BE26C3300D40120 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1131E8592BE26FF100D40120 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		1131E85C2BE271EF00D40120 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				1131E8472BE26C3200D40120 /* ConfrigeratorApp.swift */,
+				1131E8572BE26FCB00D40120 /* Presentation */,
 				1131E8492BE26C3200D40120 /* ContentView.swift */,
 				1131E84B2BE26C3200D40120 /* Item.swift */,
 				1131E84D2BE26C3300D40120 /* Assets.xcassets */,
@@ -68,6 +73,31 @@
 				1131E8502BE26C3300D40120 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1131E8572BE26FCB00D40120 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1131E85B2BE271E400D40120 /* MainPage */,
+				1131E8582BE26FDC00D40120 /* LoginPage */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1131E8582BE26FDC00D40120 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8592BE26FF100D40120 /* LoginPage.swift */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		1131E85B2BE271E400D40120 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				1131E85C2BE271EF00D40120 /* MainPage.swift */,
+			);
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1131E85D2BE271EF00D40120 /* MainPage.swift in Sources */,
+				1131E85A2BE26FF100D40120 /* LoginPage.swift in Sources */,
 				1131E84A2BE26C3200D40120 /* ContentView.swift in Sources */,
 				1131E84C2BE26C3200D40120 /* Item.swift in Sources */,
 				1131E8482BE26C3200D40120 /* ConfrigeratorApp.swift in Sources */,
