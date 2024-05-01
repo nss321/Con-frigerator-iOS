@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ConfrigeratorTab: View {
+    @State private var selectedImageIndex: Int? = nil
+
     private let columns = [
         GridItem(.flexible(), spacing: 20),
         GridItem(.flexible(), spacing: 20)
@@ -15,6 +17,7 @@ struct ConfrigeratorTab: View {
     
     // 이미지 배열을 나타내는 데모 데이터입니다. 실제 앱에서는 이미지 소스를 사용해주세요.
     private let images = ["photo", "photo", "photo", "photo", "photo", "photo"]
+    
     
     var body: some View {
         VStack {
@@ -27,6 +30,7 @@ struct ConfrigeratorTab: View {
                         Button(action: {
                             // 여기에서 인덱스를 출력합니다.
                             print("Image \(index) was tapped.")
+                            self.selectedImageIndex = index
                         }) {
                             Image(systemName: "\(images[index])")
                                 .resizable()
@@ -35,6 +39,9 @@ struct ConfrigeratorTab: View {
                     }
                 }
                 .padding()
+            }
+            .sheet(item: $selectedImageIndex) { index in
+                GiftConInformation(index: index)
             }
         }
     }
