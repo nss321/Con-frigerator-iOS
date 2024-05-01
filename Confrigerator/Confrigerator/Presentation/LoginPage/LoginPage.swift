@@ -38,16 +38,17 @@ struct LoginPage: View {
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
                 
-                Button("로그인") {
-                    // TODO: 로그인 로직 처리 후
+                Button {
                     print("ID: \(username), PW: \(password), Bool: \(shouldShowMainPage)")
                     self.shouldShowMainPage.toggle()
+                } label: {
+                    Text("로그인")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
             }
             .padding()
             .navigationDestination(isPresented: self.$shouldShowMainPage) {

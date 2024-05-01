@@ -13,6 +13,10 @@ struct ContentView: View {
     @Query private var items: [Item]
 
     var body: some View {
+        LoginPage()
+    }
+
+    var origin: some View {
         NavigationSplitView {
             List {
                 ForEach(items) { item in
@@ -38,7 +42,6 @@ struct ContentView: View {
             Text("Select an item")
         }
     }
-
     private func addItem() {
         withAnimation {
             let newItem = Item(timestamp: Date())
