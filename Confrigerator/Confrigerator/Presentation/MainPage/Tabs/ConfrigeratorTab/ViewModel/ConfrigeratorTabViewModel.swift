@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+final class ConfrigeratorTabViewModel: ObservableObject {
+    var conId: Int?
+    var dimIndex: Double = -1
+}

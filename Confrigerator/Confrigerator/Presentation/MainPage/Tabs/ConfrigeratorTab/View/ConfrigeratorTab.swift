@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ConfrigeratorTab: View {
-    @State private var selectedImageIndex: Int? = nil
-
+    @State private var selectedGiftCon: GiftCon?
+    @State var dummy: [GiftCon]
+    @State var dimIndex: Double = -1
+    
     private let columns = [
         GridItem(.flexible(), spacing: 20),
         GridItem(.flexible(), spacing: 20)
@@ -20,34 +22,51 @@ struct ConfrigeratorTab: View {
     
     
     var body: some View {
-        VStack {
-            Text("이미지 갤러리")
-                .font(.largeTitle)
-            
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(images.indices, id: \.self) { index in
-                        Button(action: {
-                            // 여기에서 인덱스를 출력합니다.
-                            print("Image \(index) was tapped.")
-                            self.selectedImageIndex = index
-                        }) {
-                            Image(systemName: "\(images[index])")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+        ZStack {
+            Rectangle()
+                .fill(.black)
+                .opacity(0.5)
+                .ignoresSafeArea()
+                .zIndex(dimIndex)
+            VStack {
+                Text("이미지 갤러리")
+                    .font(.largeTitle)
+                
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(dummy, id: \.self) { item in
+                            Button(action: {
+                                self.selectedGiftCon = item
+                                self.dimIndex = 1.0
+                                print("\(item.name), \(item.id) was tapped.")
+                            }) {
+                                Image(systemName: "\(item.image)")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
                         }
                     }
+                    .padding()
                 }
-                .padding()
+                .fullScreenCover(item: $selectedGiftCon, onDismiss: {
+                    toggleIndex()
+                }) { Identifiable in
+                    GiftConInformation(conInformation: Identifiable)
+                }
+                .transaction { transaction in
+                    transaction.disablesAnimations = true
+                }
             }
-            .sheet(item: $selectedImageIndex) { index in
-                GiftConInformation(index: index)
-            }
+            .background(.white)
         }
+    }
+    
+    func toggleIndex() {
+        self.dimIndex = -1
     }
     
 }
 
 #Preview {
-    ConfrigeratorTab()
+    ConfrigeratorTab(dummy: MainPage().viewModel.dummyViewModelData)
 }
