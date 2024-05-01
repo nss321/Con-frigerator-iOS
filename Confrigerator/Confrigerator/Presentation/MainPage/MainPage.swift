@@ -26,7 +26,6 @@ struct MainPage: View {
                     .tabItem {
                         Label("마이페이지", systemImage: "star.fill")
                     }
-                
             }
         }
         .navigationBarBackButtonHidden()
