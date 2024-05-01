@@ -14,6 +14,9 @@
 		1131E8512BE26C3300D40120 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131E8502BE26C3300D40120 /* Preview Assets.xcassets */; };
 		1131E85A2BE26FF100D40120 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8592BE26FF100D40120 /* LoginPage.swift */; };
 		1131E85D2BE271EF00D40120 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E85C2BE271EF00D40120 /* MainPage.swift */; };
+		1131E8602BE27B7200D40120 /* ConfrigeratorTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E85F2BE27B7200D40120 /* ConfrigeratorTab.swift */; };
+		1131E8632BE27CBD00D40120 /* AddConTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8622BE27CBD00D40120 /* AddConTab.swift */; };
+		1131E8662BE27CD000D40120 /* MyPageTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8652BE27CD000D40120 /* MyPageTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		1131E8502BE26C3300D40120 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1131E8592BE26FF100D40120 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		1131E85C2BE271EF00D40120 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		1131E85F2BE27B7200D40120 /* ConfrigeratorTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfrigeratorTab.swift; sourceTree = "<group>"; };
+		1131E8622BE27CBD00D40120 /* AddConTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConTab.swift; sourceTree = "<group>"; };
+		1131E8652BE27CD000D40120 /* MyPageTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +101,44 @@
 		1131E85B2BE271E400D40120 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				1131E8672BE27E4500D40120 /* Tabs */,
 				1131E85C2BE271EF00D40120 /* MainPage.swift */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		1131E85E2BE27B5400D40120 /* ConfrigeratorTab */ = {
+			isa = PBXGroup;
+			children = (
+				1131E85F2BE27B7200D40120 /* ConfrigeratorTab.swift */,
+			);
+			path = ConfrigeratorTab;
+			sourceTree = "<group>";
+		};
+		1131E8612BE27CAB00D40120 /* AddConTab */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8622BE27CBD00D40120 /* AddConTab.swift */,
+			);
+			path = AddConTab;
+			sourceTree = "<group>";
+		};
+		1131E8642BE27CC400D40120 /* MyPageTab */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8652BE27CD000D40120 /* MyPageTab.swift */,
+			);
+			path = MyPageTab;
+			sourceTree = "<group>";
+		};
+		1131E8672BE27E4500D40120 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8642BE27CC400D40120 /* MyPageTab */,
+				1131E8612BE27CAB00D40120 /* AddConTab */,
+				1131E85E2BE27B5400D40120 /* ConfrigeratorTab */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1131E85D2BE271EF00D40120 /* MainPage.swift in Sources */,
+				1131E8632BE27CBD00D40120 /* AddConTab.swift in Sources */,
 				1131E85A2BE26FF100D40120 /* LoginPage.swift in Sources */,
 				1131E84A2BE26C3200D40120 /* ContentView.swift in Sources */,
+				1131E8662BE27CD000D40120 /* MyPageTab.swift in Sources */,
+				1131E8602BE27B7200D40120 /* ConfrigeratorTab.swift in Sources */,
 				1131E84C2BE26C3200D40120 /* Item.swift in Sources */,
 				1131E8482BE26C3200D40120 /* ConfrigeratorApp.swift in Sources */,
 			);
@@ -316,6 +360,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +390,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
