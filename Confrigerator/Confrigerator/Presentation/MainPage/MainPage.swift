@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MainPage: View {
     private let images = Array(repeating: "photo", count: 6)
+    @StateObject var viewModel = MainPageViewModel()
     
     var body: some View {
         ZStack {
             TabView {
-                ConfrigeratorTab()
+                ConfrigeratorTab(dummy: viewModel.dummyViewModelData)
                     .tabItem {
                         Label("콘장고", systemImage: "star.fill")
                     }
@@ -25,7 +26,6 @@ struct MainPage: View {
                     .tabItem {
                         Label("마이페이지", systemImage: "star.fill")
                     }
-                
             }
         }
         .navigationBarBackButtonHidden()
