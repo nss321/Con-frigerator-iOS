@@ -10,6 +10,7 @@ import SwiftUI
 struct GiftConInformation: View {
     @Environment(\.dismiss) var dismiss
     var conInformation: GiftCon
+    var dismissAction: () -> Void
     private let screenSize = UIScreen.main.bounds.size
     
     var body: some View {
@@ -37,6 +38,7 @@ struct GiftConInformation: View {
                 Button {
                     print("dismiss")
                     dismiss()
+                    dismissAction()
                 } label: {
                     Image("dismissButton")
                         .padding()
@@ -80,5 +82,7 @@ struct GiftConInformation: View {
 }
 
 #Preview {
-    GiftConInformation(conInformation: dummyData.first!)
+    GiftConInformation(conInformation: dummyData.first!, dismissAction: {
+        ConfrigeratorTab(dummy: MainPage().viewModel.dummyViewModelData).toggleIndex()
+    })
 }

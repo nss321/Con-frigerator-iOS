@@ -17,16 +17,13 @@ struct ConfrigeratorTab: View {
         GridItem(.flexible(), spacing: 20)
     ]
     
-    // 이미지 배열을 나타내는 데모 데이터입니다. 실제 앱에서는 이미지 소스를 사용해주세요.
-    private let images = ["photo", "photo", "photo", "photo", "photo", "photo"]
-    
-    
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(.black)
                 .opacity(0.5)
                 .ignoresSafeArea()
+                .transition(.opacity)
                 .zIndex(dimIndex)
             VStack {
                 Text("이미지 갤러리")
@@ -37,7 +34,7 @@ struct ConfrigeratorTab: View {
                         ForEach(dummy, id: \.self) { item in
                             Button(action: {
                                 self.selectedGiftCon = item
-                                self.dimIndex = 1.0
+                                toggleIndex()
                                 print("\(item.name), \(item.id) was tapped.")
                             }) {
                                 Image(systemName: "\(item.image)")
@@ -48,13 +45,8 @@ struct ConfrigeratorTab: View {
                     }
                     .padding()
                 }
-                .fullScreenCover(item: $selectedGiftCon, onDismiss: {
-                    toggleIndex()
-                }) { Identifiable in
-                    GiftConInformation(conInformation: Identifiable)
-                }
-                .transaction { transaction in
-                    transaction.disablesAnimations = true
+                .fullScreenCover(item: $selectedGiftCon) { Identifiable in
+                    GiftConInformation(conInformation: Identifiable, dismissAction:{ toggleIndex() })
                 }
             }
             .background(.white)
@@ -62,7 +54,13 @@ struct ConfrigeratorTab: View {
     }
     
     func toggleIndex() {
-        self.dimIndex = -1
+        if self.dimIndex == -1 {
+            self.dimIndex = 1.0
+
+        } else {
+            self.dimIndex = -1
+
+        }
     }
     
 }
