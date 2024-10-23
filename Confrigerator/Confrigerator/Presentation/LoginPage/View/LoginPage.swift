@@ -17,37 +17,26 @@ struct LoginPage: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Spacer()
+                
                 // 로고
-                Image("logoImage")
+                Image("AppLogo")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 120)
-                    .padding(.bottom, 50)
+                    .frame(maxWidth: .infinity)
+                    .padding(50)
                 
-                // ID 입력 필드
-                TextField("ID를 입력하세요", text: $username)
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                
-                // PW 입력 필드
-                SecureField("비밀번호를 입력하세요", text: $password)
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
+                Spacer()
                 
                 Button {
                     print("ID: \(username), PW: \(password), Bool: \(shouldShowMainPage)")
                     self.shouldShowMainPage.toggle()
                 } label: {
-                    Text("로그인")
-                        .padding()
+                    Image("kakaoLoginButton")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .padding(.bottom)
                 }
             }
             .padding()
