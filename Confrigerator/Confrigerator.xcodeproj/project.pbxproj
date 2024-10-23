@@ -23,6 +23,7 @@
 		1131E8782BE29E8000D40120 /* AddConTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8772BE29E8000D40120 /* AddConTabViewModel.swift */; };
 		1131E87C2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E87B2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift */; };
 		1131E87E2BE29EBB00D40120 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E87D2BE29EBB00D40120 /* MainPageViewModel.swift */; };
+		115BEB2E2CC13AC2009D4D60 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 115BEB2D2CC13AC2009D4D60 /* PopupView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115BEB2E2CC13AC2009D4D60 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +109,7 @@
 		1131E8582BE26FDC00D40120 /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
-				1131E8592BE26FF100D40120 /* LoginPage.swift */,
+				1131E89F2BF2814700D40120 /* View */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -115,9 +117,9 @@
 		1131E85B2BE271E400D40120 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				1131E89E2BF280B200D40120 /* ViewModel */,
+				1131E89D2BF280A600D40120 /* View */,
 				1131E8672BE27E4500D40120 /* Tabs */,
-				1131E85C2BE271EF00D40120 /* MainPage.swift */,
-				1131E87D2BE29EBB00D40120 /* MainPageViewModel.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -162,7 +164,7 @@
 		1131E8682BE295D900D40120 /* GiftConInformation */ = {
 			isa = PBXGroup;
 			children = (
-				1131E8692BE2960000D40120 /* GiftConInformation.swift */,
+				1131E8A02BF2815500D40120 /* View */,
 			);
 			path = GiftConInformation;
 			sourceTree = "<group>";
@@ -223,6 +225,38 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1131E89D2BF280A600D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E85C2BE271EF00D40120 /* MainPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1131E89E2BF280B200D40120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1131E87D2BE29EBB00D40120 /* MainPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1131E89F2BF2814700D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8592BE26FF100D40120 /* LoginPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1131E8A02BF2815500D40120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1131E8692BE2960000D40120 /* GiftConInformation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +273,9 @@
 			dependencies = (
 			);
 			name = Confrigerator;
+			packageProductDependencies = (
+				115BEB2D2CC13AC2009D4D60 /* PopupView */,
+			);
 			productName = Confrigerator;
 			productReference = 1131E8442BE26C3200D40120 /* Confrigerator.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +304,9 @@
 				Base,
 			);
 			mainGroup = 1131E83B2BE26C3200D40120;
+			packageReferences = (
+				115BEB2C2CC13AC2009D4D60 /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = 1131E8452BE26C3200D40120 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -514,6 +554,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		115BEB2C2CC13AC2009D4D60 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		115BEB2D2CC13AC2009D4D60 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115BEB2C2CC13AC2009D4D60 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1131E83C2BE26C3200D40120 /* Project object */;
 }
