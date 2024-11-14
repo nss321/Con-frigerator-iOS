@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import SwiftData
+import KakaoSDKAuth
+import KakaoSDKUser
 
 struct LoginPage: View {
     @State private var username: String = ""
@@ -28,16 +31,7 @@ struct LoginPage: View {
                 
                 Spacer()
                 
-                Button {
-                    print("ID: \(username), PW: \(password), Bool: \(shouldShowMainPage)")
-                    self.shouldShowMainPage.toggle()
-                } label: {
-                    Image("kakaoLoginButton")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
-                        .padding(.bottom)
-                }
+                KakaoSigninButton(present: $shouldShowMainPage)
             }
             .padding()
             .navigationDestination(isPresented: self.$shouldShowMainPage) {
@@ -49,4 +43,45 @@ struct LoginPage: View {
 
 #Preview {
     LoginPage()
+        .modelContainer(for: GiftconItem.self, inMemory: true)
+}
+
+
+struct KakaoSigninButton: View {
+    @Binding var present: Bool
+    @AppStorage("userNickname") private var userNickname: String = ""
+    @AppStorage("isLoggedIn") private var isLoggedIn = false
+
+    var body: some View {
+        Button {
+            if (UserApi.isKakaoTalkLoginAvailable()) {
+                UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        print("loginWithKakaoTalk() success.")
+                        self.present.toggle()
+                        // 성공 시 동작 구현
+                        _ = oauthToken
+                        withAnimation {
+                            isLoggedIn = true
+                        }
+                        UserApi.shared.me { (user, erroe) in
+                            if let error = error {
+                                print(error)
+                            } else {
+                                userNickname = user?.kakaoAccount?.profile?.nickname ?? "닉네임을 불러올 수 없습니다."
+                            }
+                        }
+                    }
+                }
+            }
+        } label: {
+            Image("kakaoLoginButton")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
+                .padding(.bottom)
+        }
+    }
 }

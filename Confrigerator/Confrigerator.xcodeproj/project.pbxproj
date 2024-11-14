@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1131E8482BE26C3200D40120 /* ConfrigeratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8472BE26C3200D40120 /* ConfrigeratorApp.swift */; };
-		1131E84A2BE26C3200D40120 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8492BE26C3200D40120 /* ContentView.swift */; };
-		1131E84C2BE26C3200D40120 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E84B2BE26C3200D40120 /* Item.swift */; };
 		1131E84E2BE26C3300D40120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131E84D2BE26C3300D40120 /* Assets.xcassets */; };
 		1131E8512BE26C3300D40120 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1131E8502BE26C3300D40120 /* Preview Assets.xcassets */; };
 		1131E85A2BE26FF100D40120 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8592BE26FF100D40120 /* LoginPage.swift */; };
@@ -19,18 +17,22 @@
 		1131E8662BE27CD000D40120 /* MyPageTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8652BE27CD000D40120 /* MyPageTab.swift */; };
 		1131E86A2BE2960000D40120 /* GiftConInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8692BE2960000D40120 /* GiftConInformation.swift */; };
 		1131E86D2BE29BC500D40120 /* GiftConModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E86C2BE29BC500D40120 /* GiftConModel.swift */; };
-		1131E8742BE29E5C00D40120 /* MyPageTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8732BE29E5C00D40120 /* MyPageTabViewModel.swift */; };
-		1131E8782BE29E8000D40120 /* AddConTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E8772BE29E8000D40120 /* AddConTabViewModel.swift */; };
-		1131E87C2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E87B2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift */; };
-		1131E87E2BE29EBB00D40120 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1131E87D2BE29EBB00D40120 /* MainPageViewModel.swift */; };
 		115BEB2E2CC13AC2009D4D60 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 115BEB2D2CC13AC2009D4D60 /* PopupView */; };
+		11913C952CDE5CF5006E4473 /* AddConUsingSerialNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913C942CDE5CDE006E4473 /* AddConUsingSerialNumber.swift */; };
+		11913C972CDE5D00006E4473 /* AddConUsingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913C962CDE5CFA006E4473 /* AddConUsingImage.swift */; };
+		11913C9A2CDF00FE006E4473 /* NetworkSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913C992CDF00F7006E4473 /* NetworkSevice.swift */; };
+		11913C9C2CDF01AF006E4473 /* AddConUsingImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913C9B2CDF01AB006E4473 /* AddConUsingImageViewModel.swift */; };
+		11913CA32CDF4B02006E4473 /* AddConUsingSerialNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913CA22CDF4B01006E4473 /* AddConUsingSerialNumberViewModel.swift */; };
+		11913CA92CE23272006E4473 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 11913CA82CE23272006E4473 /* KakaoSDKAuth */; };
+		11913CAB2CE23272006E4473 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 11913CAA2CE23272006E4473 /* KakaoSDKCommon */; };
+		11913CAD2CE23272006E4473 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 11913CAC2CE23272006E4473 /* KakaoSDKUser */; };
+		11913CB02CE24FAD006E4473 /* VisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913CAF2CE24FA8006E4473 /* VisionManager.swift */; };
+		11913CB32CE25FD5006E4473 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11913CB22CE25FD2006E4473 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1131E8442BE26C3200D40120 /* Confrigerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Confrigerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1131E8472BE26C3200D40120 /* ConfrigeratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfrigeratorApp.swift; sourceTree = "<group>"; };
-		1131E8492BE26C3200D40120 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1131E84B2BE26C3200D40120 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1131E84D2BE26C3300D40120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1131E8502BE26C3300D40120 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1131E8592BE26FF100D40120 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
@@ -40,10 +42,14 @@
 		1131E8652BE27CD000D40120 /* MyPageTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTab.swift; sourceTree = "<group>"; };
 		1131E8692BE2960000D40120 /* GiftConInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftConInformation.swift; sourceTree = "<group>"; };
 		1131E86C2BE29BC500D40120 /* GiftConModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftConModel.swift; sourceTree = "<group>"; };
-		1131E8732BE29E5C00D40120 /* MyPageTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTabViewModel.swift; sourceTree = "<group>"; };
-		1131E8772BE29E8000D40120 /* AddConTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConTabViewModel.swift; sourceTree = "<group>"; };
-		1131E87B2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfrigeratorTabViewModel.swift; sourceTree = "<group>"; };
-		1131E87D2BE29EBB00D40120 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		11913C942CDE5CDE006E4473 /* AddConUsingSerialNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConUsingSerialNumber.swift; sourceTree = "<group>"; };
+		11913C962CDE5CFA006E4473 /* AddConUsingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConUsingImage.swift; sourceTree = "<group>"; };
+		11913C992CDF00F7006E4473 /* NetworkSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSevice.swift; sourceTree = "<group>"; };
+		11913C9B2CDF01AB006E4473 /* AddConUsingImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConUsingImageViewModel.swift; sourceTree = "<group>"; };
+		11913C9D2CDF0640006E4473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		11913CA22CDF4B01006E4473 /* AddConUsingSerialNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConUsingSerialNumberViewModel.swift; sourceTree = "<group>"; };
+		11913CAF2CE24FA8006E4473 /* VisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionManager.swift; sourceTree = "<group>"; };
+		11913CB22CE25FD2006E4473 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11913CAD2CE23272006E4473 /* KakaoSDKUser in Frameworks */,
 				115BEB2E2CC13AC2009D4D60 /* PopupView in Frameworks */,
+				11913CAB2CE23272006E4473 /* KakaoSDKCommon in Frameworks */,
+				11913CA92CE23272006E4473 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				1131E8472BE26C3200D40120 /* ConfrigeratorApp.swift */,
+				11913C9D2CDF0640006E4473 /* Info.plist */,
+				11913CAE2CE24F57006E4473 /* Utility */,
+				11913C982CDF00EC006E4473 /* Network */,
 				1131E86B2BE29BAE00D40120 /* Model */,
 				1131E8572BE26FCB00D40120 /* Presentation */,
-				1131E8492BE26C3200D40120 /* ContentView.swift */,
-				1131E84B2BE26C3200D40120 /* Item.swift */,
 				1131E84D2BE26C3300D40120 /* Assets.xcassets */,
 				1131E84F2BE26C3300D40120 /* Preview Content */,
 			);
@@ -99,6 +109,7 @@
 		1131E8572BE26FCB00D40120 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				11913CB12CE25FB6006E4473 /* Component */,
 				1131E8682BE295D900D40120 /* GiftConInformation */,
 				1131E85B2BE271E400D40120 /* MainPage */,
 				1131E8582BE26FDC00D40120 /* LoginPage */,
@@ -117,7 +128,6 @@
 		1131E85B2BE271E400D40120 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				1131E89E2BF280B200D40120 /* ViewModel */,
 				1131E89D2BF280A600D40120 /* View */,
 				1131E8672BE27E4500D40120 /* Tabs */,
 			);
@@ -127,7 +137,6 @@
 		1131E85E2BE27B5400D40120 /* ConfrigeratorTab */ = {
 			isa = PBXGroup;
 			children = (
-				1131E87A2BE29E8F00D40120 /* ViewModel */,
 				1131E8792BE29E8B00D40120 /* View */,
 			);
 			path = ConfrigeratorTab;
@@ -145,7 +154,6 @@
 		1131E8642BE27CC400D40120 /* MyPageTab */ = {
 			isa = PBXGroup;
 			children = (
-				1131E8722BE29E4F00D40120 /* ViewModel */,
 				1131E8712BE29E4900D40120 /* View */,
 			);
 			path = MyPageTab;
@@ -185,17 +193,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1131E8722BE29E4F00D40120 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1131E8732BE29E5C00D40120 /* MyPageTabViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		1131E8752BE29E6800D40120 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				11913C962CDE5CFA006E4473 /* AddConUsingImage.swift */,
+				11913C942CDE5CDE006E4473 /* AddConUsingSerialNumber.swift */,
 				1131E8622BE27CBD00D40120 /* AddConTab.swift */,
 			);
 			path = View;
@@ -204,7 +206,8 @@
 		1131E8762BE29E6E00D40120 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1131E8772BE29E8000D40120 /* AddConTabViewModel.swift */,
+				11913CA22CDF4B01006E4473 /* AddConUsingSerialNumberViewModel.swift */,
+				11913C9B2CDF01AB006E4473 /* AddConUsingImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,28 +220,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1131E87A2BE29E8F00D40120 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1131E87B2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		1131E89D2BF280A600D40120 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				1131E85C2BE271EF00D40120 /* MainPage.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		1131E89E2BF280B200D40120 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1131E87D2BE29EBB00D40120 /* MainPageViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1131E89F2BF2814700D40120 /* View */ = {
@@ -255,6 +242,30 @@
 				1131E8692BE2960000D40120 /* GiftConInformation.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		11913C982CDF00EC006E4473 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11913C992CDF00F7006E4473 /* NetworkSevice.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11913CAE2CE24F57006E4473 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				11913CAF2CE24FA8006E4473 /* VisionManager.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		11913CB12CE25FB6006E4473 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				11913CB22CE25FD2006E4473 /* ImagePicker.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,9 @@
 			name = Confrigerator;
 			packageProductDependencies = (
 				115BEB2D2CC13AC2009D4D60 /* PopupView */,
+				11913CA82CE23272006E4473 /* KakaoSDKAuth */,
+				11913CAA2CE23272006E4473 /* KakaoSDKCommon */,
+				11913CAC2CE23272006E4473 /* KakaoSDKUser */,
 			);
 			productName = Confrigerator;
 			productReference = 1131E8442BE26C3200D40120 /* Confrigerator.app */;
@@ -306,6 +320,7 @@
 			mainGroup = 1131E83B2BE26C3200D40120;
 			packageReferences = (
 				115BEB2C2CC13AC2009D4D60 /* XCRemoteSwiftPackageReference "PopupView" */,
+				11913CA72CE23272006E4473 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = 1131E8452BE26C3200D40120 /* Products */;
 			projectDirPath = "";
@@ -333,20 +348,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1131E8742BE29E5C00D40120 /* MyPageTabViewModel.swift in Sources */,
+				11913C9A2CDF00FE006E4473 /* NetworkSevice.swift in Sources */,
 				1131E85D2BE271EF00D40120 /* MainPage.swift in Sources */,
 				1131E86A2BE2960000D40120 /* GiftConInformation.swift in Sources */,
+				11913CA32CDF4B02006E4473 /* AddConUsingSerialNumberViewModel.swift in Sources */,
 				1131E8632BE27CBD00D40120 /* AddConTab.swift in Sources */,
 				1131E85A2BE26FF100D40120 /* LoginPage.swift in Sources */,
-				1131E84A2BE26C3200D40120 /* ContentView.swift in Sources */,
+				11913CB32CE25FD5006E4473 /* ImagePicker.swift in Sources */,
 				1131E8662BE27CD000D40120 /* MyPageTab.swift in Sources */,
 				1131E8602BE27B7200D40120 /* ConfrigeratorTab.swift in Sources */,
-				1131E84C2BE26C3200D40120 /* Item.swift in Sources */,
+				11913C9C2CDF01AF006E4473 /* AddConUsingImageViewModel.swift in Sources */,
 				1131E86D2BE29BC500D40120 /* GiftConModel.swift in Sources */,
-				1131E87E2BE29EBB00D40120 /* MainPageViewModel.swift in Sources */,
+				11913C972CDE5D00006E4473 /* AddConUsingImage.swift in Sources */,
 				1131E8482BE26C3200D40120 /* ConfrigeratorApp.swift in Sources */,
-				1131E87C2BE29E9B00D40120 /* ConfrigeratorTabViewModel.swift in Sources */,
-				1131E8782BE29E8000D40120 /* AddConTabViewModel.swift in Sources */,
+				11913CB02CE24FAD006E4473 /* VisionManager.swift in Sources */,
+				11913C952CDE5CF5006E4473 /* AddConUsingSerialNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +499,8 @@
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Confrigerator/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사용자의 기프티콘을 추가하기 위해 앨범이 사용됩니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +531,8 @@
 				DEVELOPMENT_TEAM = W43DLLFB4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Confrigerator/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사용자의 기프티콘을 추가하기 위해 앨범이 사용됩니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -564,6 +584,14 @@
 				minimumVersion = 3.1.2;
 			};
 		};
+		11913CA72CE23272006E4473 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.23.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -571,6 +599,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 115BEB2C2CC13AC2009D4D60 /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
+		};
+		11913CA82CE23272006E4473 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11913CA72CE23272006E4473 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		11913CAA2CE23272006E4473 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11913CA72CE23272006E4473 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		11913CAC2CE23272006E4473 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11913CA72CE23272006E4473 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

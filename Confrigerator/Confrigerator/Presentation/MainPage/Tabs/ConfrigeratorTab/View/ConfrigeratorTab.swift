@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ConfrigeratorTab: View {
-    @State private var selectedGiftCon: GiftCon?
-    @State var dummy: [GiftCon]
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \GiftconItem.id) private var items: [GiftconItem]
+    
+    @State private var selectedGiftCon: GiftconItem?
     @State var dimIndex: Double = -1
     
     private let columns = [
@@ -18,53 +21,70 @@ struct ConfrigeratorTab: View {
     ]
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.black)
-                .opacity(0.5)
-                .ignoresSafeArea()
-                .transition(.opacity)
-                .zIndex(dimIndex)
-            VStack {
-                Text("이미지 갤러리")
-                    .font(.largeTitle)
-                
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(dummy, id: \.self) { item in
-                            Button(action: {
-                                self.selectedGiftCon = item
-                                toggleIndex()
-                                print("\(item.name), \(item.id) was tapped.")
-                            }) {
-                                Image(systemName: "\(item.image)")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+        NavigationView {
+            ZStack {
+                Rectangle()
+                    .fill(.black)
+                    .opacity(0.5)
+                    .ignoresSafeArea()
+                    .transition(.opacity)
+                    .zIndex(dimIndex)
+                VStack {
+                    ScrollView {
+                        if items.isEmpty {
+                            Text("아직 기프티콘이 없어요.\n\n기프티콘을 추가해보세요.")
+                                .multilineTextAlignment(.center)
+                                .font(.title3)
+                                .bold()
+                                .frame(maxWidth: .infinity)
+                                .padding(.top, UIScreen.main.bounds.height/4)
+                        } else {
+                            LazyVGrid(columns: columns, spacing: 20) {
+                                ForEach(items, id: \.self) { item in
+                                    Button(action: {
+                                        self.selectedGiftCon = item
+                                        toggleIndex()
+                                        print("\(item.getName()), \(item.id) was tapped.")
+                                    }) {
+                                        VStack(alignment: .center) {
+                                            if let uiImage = item.image {
+                                                Image(uiImage: uiImage)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width: 160, height: 160)
+                                                
+                                            } else {
+                                                Text("이미지를 불러올 수 없습니다.")
+                                                    .padding()
+                                            }
+                                            Text(item.getName())
+                                                .font(.body)
+                                                .foregroundStyle(Color.black)
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                     .padding()
+                    .fullScreenCover(item: $selectedGiftCon) { Identifiable in
+                        GiftConInformation(conInformation: Identifiable, dismissAction:{ toggleIndex() })
+                    }
                 }
-                .fullScreenCover(item: $selectedGiftCon) { Identifiable in
-                    GiftConInformation(conInformation: Identifiable, dismissAction:{ toggleIndex() })
-                }
+                .background(.white)
             }
-            .background(.white)
+            .navigationTitle("콘장고")
         }
     }
     
     func toggleIndex() {
         if self.dimIndex == -1 {
             self.dimIndex = 1.0
-
+            
         } else {
             self.dimIndex = -1
-
+            
         }
     }
     
-}
-
-#Preview {
-    ConfrigeratorTab(dummy: MainPage().viewModel.dummyViewModelData)
 }
