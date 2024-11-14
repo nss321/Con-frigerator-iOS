@@ -37,4 +37,27 @@
 
 
 ## 스크린샷
-- 추가 예정
+
+### 카카오 로그인
+<img src="https://github.com/user-attachments/assets/142e3ae3-f04d-4e6b-8b72-50f3cb0502fe" width = 300/>
+<img src="https://github.com/user-attachments/assets/7e6191bf-d135-4d16-bd36-6bd03d3d6bc9" width = 300/>
+<br>
+<br>
+
+### 메인 화면
+<img src="https://github.com/user-attachments/assets/1869d994-4172-47d0-9028-2b5245a5ef7d" width = 300/>
+<img src="https://github.com/user-attachments/assets/a19b0f1c-14b1-40e4-acaa-36b35c3cb99f" width = 300/>
+<br>
+<br>
+
+### 기프티콘 추가
+<img src="https://github.com/user-attachments/assets/2e9079de-2d12-4c6e-9a12-46a0483fed8f" width = 300/>
+<img src="https://github.com/user-attachments/assets/09f3fac4-32fe-42d9-b1f7-513748f5d682" width = 300/>
+<img src="https://github.com/user-attachments/assets/1182b603-1501-42e7-ab28-6953868ae535" width = 300/>
+<br>
+<br>
+
+<img src="https://github.com/user-attachments/assets/ca118a20-077e-4ae7-9c26-08486b5b28b8" width = 300/>
+<img src="https://github.com/user-attachments/assets/d7fc5c98-1b78-463c-951a-21b5bc1831af" width = 300/>
+
+
